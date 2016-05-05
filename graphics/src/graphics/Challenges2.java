@@ -12,7 +12,7 @@ public class Challenges2 extends Canvas
 		private static final long	serialVersionUID	= 1L;
 		
 		public static void main(String[] args)
-			{
+			{	
 				Challenges2 canvas = new Challenges2();
 		        JFrame frame = new JFrame();
 		        frame.setSize(400, 400);
@@ -25,23 +25,62 @@ public class Challenges2 extends Canvas
 			}
 		public void paint (Graphics graphics)
 			{
-				Scanner userInput = new Scanner(System.in);
-				System.out.println("What size would you like you square?");
-				int size = userInput.nextInt();
-				Scanner userChoice = new Scanner(System.in);
-				System.out.println("Would you like red or blue?");
-				String choice = userChoice.nextLine();
+//				Scanner userInput = new Scanner(System.in);
+//				System.out.println("What size would you like you square?");
+//				int size = userInput.nextInt();
+//				Scanner userChoice = new Scanner(System.in);
+//				System.out.println("Would you like red or blue?");
+//				String choice = userChoice.nextLine();
+//				if(choice.equals ("red"))
+//					{
+//						graphics.setColor(Color.red);
+//						graphics.fillRect(0, 0, size, size);
+//					}
+//				else if (choice.equals("blue"))
+//					{
+//						graphics.setColor(Color.blue);
+//						graphics.fillRect(0, 0, size, size);
+//					}		
 				
-				if(choice.equals ("red"))
+				for(int red = 0; red < 255; red++)
 					{
-						graphics.setColor(Color.red);
-						graphics.fillRect(0, 0, size, size);
+				graphics.setColor(new Color(red));
+				graphics.fillRect(0, 0, 20, 20);
+				delay();
 					}
-				else
+				for(int red = 0; red < 255; red++)
 					{
-						graphics.setColor(Color.blue);
-						graphics.fillRect(0, 0, size, size);
+				for(int green = 0; green < 255; green++)
+					{
+				for(int blue = 0; blue < 255; blue++)
+					{
+						graphics.setColor(new Color(blue, green, blue));
+						graphics.fillRect(0, 0, 20, 20);
+					}
+					}
+					}
+				
+				for (int i = 0; i < 350; i++)
+		        	{
+			        graphics.setColor(Color.green);
+			        graphics.fillRect(i, i, 20, 20);
+			        
+			        delay();
+			        
+			        graphics.setColor(Color.white);
+			        graphics.fillRect(i, i, 20, 20);
+		        	}
+	    		}
+	
+	
+		public void delay()
+			{
+	        try
+					{
+					Thread.sleep(50);
+					} catch (InterruptedException e)
+					{
+					e.printStackTrace();
 					}
 			}
-
-	}
+			}
