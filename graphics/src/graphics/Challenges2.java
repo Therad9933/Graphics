@@ -25,28 +25,26 @@ public class Challenges2 extends Canvas
 			}
 		public void paint (Graphics graphics)
 			{
-//				Scanner userInput = new Scanner(System.in);
-//				System.out.println("What size would you like you square?");
-//				int size = userInput.nextInt();
-//				Scanner userChoice = new Scanner(System.in);
-//				System.out.println("Would you like red or blue?");
-//				String choice = userChoice.nextLine();
-//				if(choice.equals ("red"))
-//					{
-//						graphics.setColor(Color.red);
-//						graphics.fillRect(0, 0, size, size);
-//					}
-//				else if (choice.equals("blue"))
-//					{
-//						graphics.setColor(Color.blue);
-//						graphics.fillRect(0, 0, size, size);
-//					}		
+				Scanner userInput = new Scanner(System.in);
+				System.out.println("What size would you like you square?");
+				int size = userInput.nextInt();
+				Scanner userChoice = new Scanner(System.in);
+				System.out.println("Would you like red or blue?");
+				String choice = userChoice.nextLine();
+				if(choice.equals ("red"))
+					{
+						graphics.setColor(Color.red);
+						graphics.fillRect(0, 0, size, size);
+					}
+				else if (choice.equals("blue"))
+					{
+						graphics.setColor(Color.blue);
+						graphics.fillRect(0, 0, size, size);
+					}		
 				
 				for(int red = 0; red < 255; red++)
 					{
 				graphics.setColor(new Color(red));
-				graphics.fillRect(0, 0, 20, 20);
-				delay();
 					}
 				for(int red = 0; red < 255; red++)
 					{
@@ -55,7 +53,7 @@ public class Challenges2 extends Canvas
 				for(int blue = 0; blue < 255; blue++)
 					{
 						graphics.setColor(new Color(blue, green, blue));
-						graphics.fillRect(0, 0, 20, 20);
+						graphics.fillRect(100, 100, 100, 100);
 					}
 					}
 					}
